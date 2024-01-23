@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Game</title>
+    <style>
+        button{
+            cursor: pointer;
+            margin:3px;
+            width: 60px;
+            height: 80px;
+            font-size: 21px;
+            transition-duration: 0.5s;
+            background-color:#EBECFF;
+        }
+
+        button:hover{
+            border-radius:10px;
+            -webkit-transform: translateY(-10px);
+	        transform: translateY(-10px);
+            transition-duration: 0.5s;
+            background-color: #ced0f7;
+        }
+
+        button:focus{
+            transition-duration: 0.5s;
+            background-color: #9FF1B4;
+        }
+
+        .red-card{
+            color:red;
+        }
+
+        #player-1, #player-2{
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <section id="player-1">
+        Player 1:
+        <br>
+        <br>
+        <button class="black-card">2 &#9827</button>
+        <button class="red-card">9 &#9829</button>
+        <button class="red-card">6 &#9829</button>
+        <button class="red-card">A &#9830</button>
+        <button class="black-card">Q &#9824</button>
+        <button class="black-card">J &#9827</button>
+    </section>
+    <br>
+    <section id="player-2">
+        Player 2:
+        <br>
+        <br>
+        <button class="red-card">3 &#9829</button>
+        <button class="black-card">A &#9827</button>
+        <button class="black-card">10 &#9827</button>
+        <button class="red-card">K &#9830</button>
+        <button class="black-card">8 &#9824</button>
+        <button class="red-card">3 &#9829</button>
+    </section>
+</body>
+</html>
