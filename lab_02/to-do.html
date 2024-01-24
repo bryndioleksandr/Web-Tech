@@ -24,7 +24,16 @@
 
         #to-do ul li input {
             cursor: pointer;
-            margin: 10px;
+            margin: 20px;
+        }
+
+        #to-do button {
+            margin: 20px;
+            background-color: rgba(0, 0, 0, 0);
+            border: 0px;
+            cursor: pointer;
+            color: rgb(194, 21, 21);
+            font-size: 15px;
         }
 
         #to-do ul li:nth-child(odd) {
@@ -40,18 +49,30 @@
 <body>
     <section id="to-do">
         <ul>
-            <li><input type="checkbox" id="" onchange="checkStatus(this)">Hit the gym</li>
-            <li><input type="checkbox" id="" onchange="checkStatus(this)">Pay bills</li>
-            <li><input type="checkbox" id="" onchange="checkStatus(this)">Meet John</li>
-            <li><input type="checkbox" id="" onchange="checkStatus(this)">Buy eggs</li>
-            <li><input type="checkbox" id="" onchange="checkStatus(this)">Read a book</li>
-            <li><input type="checkbox" id="" onchange="checkStatus(this)">Organize office</li>
-            <li><input type="checkbox" id="" onchange="checkStatus(this)">Eat dinner</li>
-            <li><input type="checkbox" id="" onchange="checkStatus(this)">Buy apples</li>
-            <li><input type="checkbox" id="" onchange="checkStatus(this)">Meet Georg</li>
-            <li><input type="checkbox" id="" onchange="checkStatus(this)">Feed the cat</li>
-            <li><input type="checkbox" id="" onchange="checkStatus(this)">Write a letter</li>
-            <li><input type="checkbox" id="" onchange="checkStatus(this)">Run 1 km</li>
+            <li><input type="checkbox" id="" onchange="checkStatus(this)">Hit the gym<button
+                    onclick="deleteList(this)">&#10006</button></li>
+            <li><input type="checkbox" id="" onchange="checkStatus(this)">Pay bills <button
+                    onclick="deleteList(this)">&#10006</button></li>
+            <li><input type="checkbox" id="" onchange="checkStatus(this)">Meet John <button
+                    onclick="deleteList(this)">&#10006</button></li>
+            <li><input type="checkbox" id="" onchange="checkStatus(this)">Buy eggs <button
+                    onclick="deleteList(this)">&#10006</button></li>
+            <li><input type="checkbox" id="" onchange="checkStatus(this)">Read a book <button
+                    onclick="deleteList(this)">&#10006</button></li>
+            <li><input type="checkbox" id="" onchange="checkStatus(this)">Organize office <button
+                    onclick="deleteList(this)">&#10006</button></li>
+            <li><input type="checkbox" id="" onchange="checkStatus(this)">Eat dinner <button
+                    onclick="deleteList(this)">&#10006</button></li>
+            <li><input type="checkbox" id="" onchange="checkStatus(this)">Buy apples <button
+                    onclick="deleteList(this)">&#10006</button></li>
+            <li><input type="checkbox" id="" onchange="checkStatus(this)">Meet Georg <button
+                    onclick="deleteList(this)">&#10006</button></li>
+            <li><input type="checkbox" id="" onchange="checkStatus(this)">Feed the cat <button
+                    onclick="deleteList(this)">&#10006</button></li>
+            <li><input type="checkbox" id="" onchange="checkStatus(this)">Write a letter <button
+                    onclick="deleteList(this)">&#10006</button></li>
+            <li><input type="checkbox" id="" onchange="checkStatus(this)">Run 1 km <button
+                    onclick="deleteList(this)">&#10006</button></li>
         </ul>
     </section>
 
@@ -64,15 +85,21 @@
                 myFlag.style.textDecoration = "line-through";
             }
             else {
-                if (temp.length%2 == 0) {
+                if (temp.length % 2 == 0) {
                     myFlag.style.backgroundColor = "#A5CCDB";
                     myFlag.style.textDecoration = "none";
                 }
-                else if (temp.length%2 == 1) {
+                else if (temp.length % 2 == 1) {
                     myFlag.style.backgroundColor = "#ADD9E6";
                     myFlag.style.textDecoration = "none";
                 }
             }
+        }
+
+        function deleteList(button) {
+            let myList = button.closest('ul');
+            let listItem = button.parentElement;
+            myList.removeChild(listItem);
         }
     </script>
 </body>
