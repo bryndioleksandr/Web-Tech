@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do</title>
+    <style>
+        #to-do ul {
+            list-style: none;
+        }
+
+        #to-do {
+            background-color: #efd190;
+            width: 500px;
+            margin: auto;
+            font-family: Arial, sans-serif;
+            font-size: 20px;
+        }
+
+        #to-do ul li {
+            margin-left: -40px;
+        }
+
+        #to-do ul li input {
+            cursor: pointer;
+            margin: 10px;
+        }
+
+        #to-do ul li:nth-child(odd) {
+            background-color: #A5CCDB;
+        }
+
+        #to-do ul li:nth-child(even) {
+            background-color: #ADD9E6;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="to-do">
+        <ul>
+            <li><input type="checkbox" id="" onchange="checkStatus(this)">Hit the gym</li>
+            <li><input type="checkbox" id="" onchange="checkStatus(this)">Pay bills</li>
+            <li><input type="checkbox" id="" onchange="checkStatus(this)">Meet John</li>
+            <li><input type="checkbox" id="" onchange="checkStatus(this)">Buy eggs</li>
+            <li><input type="checkbox" id="" onchange="checkStatus(this)">Read a book</li>
+            <li><input type="checkbox" id="" onchange="checkStatus(this)">Organize office</li>
+            <li><input type="checkbox" id="" onchange="checkStatus(this)">Eat dinner</li>
+            <li><input type="checkbox" id="" onchange="checkStatus(this)">Buy apples</li>
+            <li><input type="checkbox" id="" onchange="checkStatus(this)">Meet Georg</li>
+            <li><input type="checkbox" id="" onchange="checkStatus(this)">Feed the cat</li>
+            <li><input type="checkbox" id="" onchange="checkStatus(this)">Write a letter</li>
+            <li><input type="checkbox" id="" onchange="checkStatus(this)">Run 1 km</li>
+        </ul>
+    </section>
+
+    <script>
+        function checkStatus(checkBox) {
+            let myFlag = checkBox.parentElement;
+            let temp = document.getElementsByTagName('li');
+            if (checkBox.checked) {
+                myFlag.style.backgroundColor = "#E2E2E2";
+                myFlag.style.textDecoration = "line-through";
+            }
+            else {
+                if (temp.length%2 == 0) {
+                    myFlag.style.backgroundColor = "#A5CCDB";
+                    myFlag.style.textDecoration = "none";
+                }
+                else if (temp.length%2 == 1) {
+                    myFlag.style.backgroundColor = "#ADD9E6";
+                    myFlag.style.textDecoration = "none";
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
