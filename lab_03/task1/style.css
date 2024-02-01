@@ -1,0 +1,19 @@
+.table td, .table.th{
+    border:1px solid #6395ff;
+    padding: 5px 10px 5px 10px;
+}
+
+.table{
+    border-spacing: 0;
+    width: 500px;
+}
+
+.table thead{
+    background-color: #dae1f8;
+}
+
+.table tfoot{
+    background-color: #5776b1;
+    color:#fff;
+    text-align: end;
+}

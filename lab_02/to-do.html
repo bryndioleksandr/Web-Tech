@@ -11,7 +11,6 @@
         }
 
         #to-do {
-            background-color: #efd190;
             width: 500px;
             margin: auto;
             font-family: Arial, sans-serif;
@@ -27,7 +26,7 @@
             margin: 20px;
         }
 
-        #to-do button {
+        #to-do ul button {
             margin: 20px;
             background-color: rgba(0, 0, 0, 0);
             border: 0px;
@@ -43,11 +42,48 @@
         #to-do ul li:nth-child(even) {
             background-color: #ADD9E6;
         }
+        .addNew{
+            text-align: center;
+        }
+
+        .checkInput{
+            display:inline-block;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size:18px;
+            text-transform: uppercase;
+        }
+
+        #accept{
+            color:green;
+            background-color: rgba(0, 0, 0, 0);
+            border:0;
+            margin:6px;
+            cursor:pointer;
+        }
+
+        #reset{
+            color:rgb(226, 10, 10);
+            background-color: rgba(0, 0, 0, 0);
+            border:0;
+            margin:6px;
+            cursor:pointer;
+        }
+
+        #sendText{
+            height: 30px;
+            width:200px;
+        }
     </style>
 </head>
 
 <body>
     <section id="to-do">
+        <section class="addNew">
+            <input type="text" name="" id="sendText" placeholder="Add new to the list: ">
+            <br>
+            <button class="checkInput" id="accept" onclick="addList()">Accept</button>
+            <button class="checkInput" id="reset" onclick="resetInput()">Reset</button>
+        </section>
         <ul>
             <li><input type="checkbox" id="" onchange="checkStatus(this)">Hit the gym<button
                     onclick="deleteList(this)">&#10006</button></li>
@@ -95,11 +131,23 @@
                 }
             }
         }
-
         function deleteList(button) {
             let myList = button.closest('ul');
             let listItem = button.parentElement;
             myList.removeChild(listItem);
+        }
+
+        function addList() {
+            let getText = document.getElementById('sendText').value;
+            let myList = document.getElementsByTagName('ul')[0];
+            let newListItem = document.createElement('li');
+            newListItem.innerHTML = '<input type="checkbox" onchange="checkStatus(this)">' + getText + '<button onclick="deleteList(this)">&#10006</button>';
+            myList.appendChild(newListItem);
+            document.getElementById('sendText').value = '';
+        }
+
+        function resetInput(){
+            document.getElementById('sendText').value = '';
         }
     </script>
 </body>
