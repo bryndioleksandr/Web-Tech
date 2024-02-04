@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="big-images">
+        <img id="big_img_1" src="images/big_picture_1.jpg" alt="">
+        <img id="big_img_2" src="images/big_picture_2.jpg" alt="">
+        <img id="big_img_3" src="images/big_picture_3.jpg" alt="">
+        <img id="big_img_4" src="images/big_picture_4.jpg" alt="">
+        <img id="big_img_5" src="images/big_picture_5.jpg" alt="">
+    </div>
+    <div id="small-images">
+        <a href="#big_img_1" onclick="changeBigImage(this)">
+            <img id="small_img_1" src="images/small_picture_1.jpg" alt="">
+        </a>
+        <a href="#big_img_2" onclick="changeBigImage(this)">
+            <img id="small_img_2" src="images/small_picture_2.jpg" alt="">
+        </a>
+        <a href="#big_img_3" onclick="changeBigImage(this)">
+            <img id="small_img_3" src="images/small_picture_3.jpg" alt="">
+        </a>
+        <a href="#big_img_4" onclick="changeBigImage(this)">
+            <img id="small_img_4" src="images/small_picture_4.jpg" alt="">
+        </a>
+        <a href="#big_img_5" onclick="changeBigImage(this)">
+            <img id="small_img_5" src="images/small_picture_5.jpg" alt="">
+        </a>
+    </div>
+    <script src="interaction.js"></script>
+</body>
+</html>

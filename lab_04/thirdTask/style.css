@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap');
+
+#container {
+    max-width: 280px;
+    background-color: rgb(219, 215, 215);
+    border:2px ridge black;
+    border-radius: 40px;
+    text-align: center;
+}
+
+.case-img{
+    margin-top:15px;
+}
+
+.madeBy{
+    text-decoration: overline;
+}
+
+button {
+    display: inline-block;
+    margin-bottom: 15px;
+    padding: 5px 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-family: 'Oswald', sans-serif;
+    font-size:16px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    font-family: 'Oswald', sans-serif;
+}
+
+.edit {
+    border: 2px solid rgb(47, 47, 250);
+    margin-right: 10px;
+    color: rgb(47, 47, 250);
+}
+
+.edit:hover {
+    background-color: rgb(166, 162, 240);
+    color: rgb(255, 255, 255);
+    transform: scale(1.1) rotate(-5deg);
+    transition-duration: 0.3s;
+}
+
+.delete {
+    border: 2px solid rgb(193, 3, 3);
+    margin-left: 10px;
+    color: rgb(193, 3, 3);
+}
+
+.delete:hover {
+    background-color: rgb(240, 162, 162);
+    color: rgb(255, 255, 255);
+    transform: scale(1.1) rotate(5deg);
+    transition-duration: 0.3s;
+}
