@@ -1,0 +1,65 @@
+.main-circle {
+    width: 300px;
+    height: 300px;
+    border: 3px solid rgb(101, 101, 255);
+    border-radius: 50%;
+    text-align: center;
+    position: relative;
+    margin:auto;
+}
+
+.center-circle {
+    width: 5px;
+    height: 5px;
+    background-color: rgb(101, 101, 255);
+    border: 3px solid rgb(101, 101, 255);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.min {
+    height: 130px;
+    width: 2px;
+    background-color: rgb(101, 101, 255);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -100%) rotate(0deg);
+    animation: rotateMinute 10s infinite linear;
+    transform-origin: bottom center;
+}
+
+.hour {
+    height: 125px;
+    width: 4px;
+    background-color: rgb(101, 101, 255);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -100%) rotate(0deg);
+    animation: rotateHour 600s infinite linear;
+    transform-origin: bottom center;
+
+}
+
+@keyframes rotateMinute {
+    from {
+        transform: translate(-50%, -100%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -100%) rotate(360deg);
+    }
+}
+
+@keyframes rotateHour {
+    from {
+        transform: translate(-50%, -100%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -100%) rotate(360deg);
+    }
+}
+

@@ -1,0 +1,80 @@
+#main-container {
+    width: 70%;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    height: 600px;
+    font-weight:bold;
+}
+
+.plan {
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+    margin: 10px;
+    text-align: center;
+    padding: 0 30px 20px 30px;
+    vertical-align: center;
+    transition:0.3s;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+h5{
+    color:rgb(134, 132, 132);
+}
+
+.plan h3{
+    text-transform: uppercase;
+    border-bottom: 4px solid;
+    line-height:40px;
+}
+
+#enterprise h3{
+    border-color:#B1314D;
+}
+
+#professional h3{
+    border-color:#D7913B;
+}
+
+#standard h3{
+    border-color:#2B6688;
+}
+
+#basic h3{
+    border-color:#62BB34;
+}
+
+button{
+    width:50%;
+    padding:8px;
+    border-radius:10px;
+    cursor: pointer;
+    transition:0.8s;
+    color:white;
+    border:0px;
+}
+
+button:hover{
+    transform: rotate(365deg);
+}
+
+.plan:hover{
+    transform: scale(1.1);
+}
+
+#enterprise button{
+    background-color:#B1314D;
+}
+
+#professional button{
+    background-color:#D7913B;
+}
+
+#standard button{
+    background-color:#2B6688;
+}
+
+#basic button{
+    background-color:#62BB34;
+}

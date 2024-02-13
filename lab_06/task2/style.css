@@ -1,0 +1,36 @@
+.container {
+    display: flex;
+    justify-content: center;
+    margin:auto;
+    perspective: 500px;
+}
+
+.block-1,
+.block-2 {
+    width: 200px;
+    height: 200px;
+    background-color: #872D62;
+    border: 8px solid #651142;
+    position: relative;
+    cursor: pointer;
+    transform-origin: left center;
+    transition: all 0.5s linear;
+    z-index: 1;
+}
+
+.block-2 {
+    transform-origin: right center;
+}
+
+.container:hover .block-1 {
+    transform: rotateY(60deg);
+}
+
+.container:hover .block-2 {
+    transform: rotateY(-60deg);
+}
+
+h1 {
+    line-height: 200px;
+    position: absolute;
+}
