@@ -1,0 +1,36 @@
+.maket * {
+    border: 2px solid greenyellow;
+    padding:20px;
+}
+
+.maket{
+    width:400px;
+    margin:auto;
+}
+
+header {
+    float: left;
+}
+
+nav {
+    float: left;
+}
+
+main {
+    clear:both;
+    float: left;
+}
+
+aside {
+    float: left;
+}
+
+footer{
+    clear:both;
+    float:left;
+}
+
+body {
+    background-color: black;
+    color: white
+}
