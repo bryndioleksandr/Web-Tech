@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Anta&display=swap');
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    background-color: #004241;
+    font-family: "Anta", sans-serif;
+}
+
+img {
+    width: 140px;
+    height: 140px;
+}
+
+.wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    margin-left: 30px;
+    height: 100%;
+}
+
+.wrapper>* {
+    flex: 1 100%;
+}
+
+li {
+    list-style-type: none;
+    text-align: center;
+    border-right: 2px solid #4F6F77;
+    padding: 5px 15px;
+    color: #4F6F77;
+    margin: 15px;
+    transition-duration: 0.3s;
+    cursor:pointer;
+}
+
+h1 {
+    text-align: left;
+    color: white;
+    font-size: 40px;
+}
+
+header {
+    display: flex;
+    max-width: 35%;
+    margin-left: 45px;
+    padding: 0;
+    height: 100%;
+}
+
+.wrapper_2{
+    display: flex;
+    align-items: center;
+    margin-left:40px;
+    height: 150px;
+}
+
+main{
+    display:flex;
+}
+
+img{
+    display:inline;
+}
+
+main div{
+    text-align: left;
+    margin:40px;
+    display:inline;
+}
+
+.light{
+    color: #4F6F77;
+}
+
+.strong{
+    color:white;
+}
+
+li:hover{
+    color:white;
+    border-right:2px solid white;
+}
+
+
+@media all and (max-width: 600px) {
+    main{
+        display:flex;
+        flex-direction: column;
+        height: 100%;
+    }
+}
+
+@media all and (min-width:600px) and (max-width: 960px) {
+    main{
+        display:grid;
+        grid-template-columns: 55% 50%;
+        grid-template-rows: 50% 50%;
+        text-align: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    header{
+        min-width: 55%;
+    }
+
+    .wrapper_2{
+        height: 300px;
+        align-items: center;
+    }
+}
+
+@media all and (min-width: 960px) {
+    .wrapper_2{
+        order:3;
+    }
+
+    header {
+        order: 2;
+    }
+
+
+    nav {
+        order: 1;
+    }
+}

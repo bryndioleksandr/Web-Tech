@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Anta&display=swap');
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    font-family: "Anta", sans-serif;
+}
+
+img {
+    width: 40px;
+    height: 40px;
+}
+
+.wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+}
+
+
+.wrapper>* {
+    flex: 1 100%;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.to-left {
+    display: flex;
+    align-items: center;
+    margin: 0px 45px;
+}
+
+.to-left>* {
+    padding: 6px;
+    font-weight: lighter;
+    font-size: 23px;
+    cursor: pointer;
+}
+
+.to-right {
+    display: flex;
+    align-items: center;
+    margin: 0px 45px;
+}
+
+.to-right>* {
+    padding: 6px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    margin: 5px 0 0 45px;
+}
+
+aside div {
+    display: flex;
+    align-items: center;
+    padding: 8px 15px;
+    margin-right:55px;
+    cursor: pointer;
+}
+
+aside div:hover{
+    background-color: #dcdcdc;
+}
+
+.wrap {
+    display:flex;
+}
+
+main img{
+    width: 20px;
+    height: 20px;
+}
+
+.letter{
+    display:flex;
+    flex-flow: row wrap;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    justify-content: left;
+}
+
+main{
+    margin-right: 25px;
+}
+
+.first{
+    width:20%;
+    text-align: left;
+    margin-left: 5px;
+}
+
+.more-letter{
+    color: #9898A0;
+}
+
+
+.read{
+    width: 70%;
+    text-align: left;
+}
+
+
+
+@media all and (min-width: 768px) {
+    aside {
+        order: 1;
+        flex: 1;
+    }
+
+    main {
+        flex: 5;
+        order: 2;
+    }
+}
+
+
+@media all and (min-width: 600px) and (max-width:768px) {
+    .letter{
+        flex-flow: column wrap;
+    }
+}
+
+@media all and (max-width: 600px) {
+    aside div span{
+        display:none;
+    }
+
+    .letter{
+        flex-flow: column wrap;
+    }
+}
+
+
+/* @media all and (max-width: 600px) {
+    main{
+        display:flex;
+        flex-direction: column;
+        height: 100%;
+    }
+}
+
+@media all and (min-width:600px) and (max-width: 960px) {
+    main{
+        display:grid;
+        grid-template-columns: 55% 50%;
+        grid-template-rows: 50% 50%;
+        text-align: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    header{
+        min-width: 55%;
+    }
+
+    .wrapper_2{
+        height: 300px;
+        align-items: center;
+    }
+}
+
+@media all and (min-width: 960px) {
+    .wrapper_2{
+        order:3;
+    }
+
+    header {
+        order: 2;
+    }
+
+
+    nav {
+        order: 1;
+    }
+} */
