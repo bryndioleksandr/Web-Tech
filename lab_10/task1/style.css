@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+
+form {
+    width: 800px;
+    background-color: #A0CCCD;
+    padding: 20px 40px 40px;
+    background-image: url(/moon_flag.png);
+    background-position: 500px 80px;
+    background-repeat: no-repeat;
+    font-family: "Open Sans", sans-serif;
+    border-left: 10px solid white;
+    color:#466C6F;
+    margin:auto;
+    margin-top: 200px;
+}
+
+.temp {
+    margin-left: 130px;
+}
+
+h2 {
+    background-color: #DB6422;
+    color: white;
+    text-transform: uppercase;
+    padding: 10px 0 10px 55px;
+}
+
+input[type=text] {
+    color:#466C6F;
+    padding: 12px 20px;
+    margin: 8px 0;
+    background-color: #AAD2D2;
+    border: 0px;
+    border-bottom: 2px solid #466C6F;
+}
+
+input[type=text]:focus{
+    background-color: #809d9d;
+    border: 0px;
+    border-bottom: 2px solid #466C6F;
+    color:#2e4849;
+}
+
+.wrapper input[type=text] {
+    padding: 10px 5px;
+    max-width: 94px;
+}
+
+input {
+    font-size: 20px;
+}

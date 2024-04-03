@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form action="/my-handling-form-page" method="post">
+        <h2> Credit card details </h2>
+        <label for="card-num"> First name: </label> <br>
+        <input type="text" id="card-num" name="card-num" placeholder="1234 5678 9012 3456"> <br>
+        <label for="name">Name On Card: </label> <br>
+        <input type="text" id="name" name="name" placeholder="Name Surname"> <br> <br>
+        <div class="wrapper">
+            <label for="month">Expiry Date </label>
+            <label for="cvv" class="temp">CVV / CVN </label>
+            <br>
+            <input type="text" id="month" name="month" placeholder="02">
+            <input type="text" id="year" name="year" placeholder="2024">
+            <input type="text" id="cvv" name="cvv" placeholder="***">
+        </div>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form action="/my-handling-form-page" method="">
+        <div class="btn"><button class="close-btn" onclick="closeForm()">&times</button></div>
+        <h2>PC Case options</h2>
+        <hr>
+        <div class="flex">
+            <div class="wrap-f">
+                <label for="producer"><strong>Made by(model):</strong> </label> <br>
+                <input type="text" id="producer" name="producer" placeholder="Model:"> <br>
+                <label for="sizes"><strong>Sizes in mm:</strong> </label> <br>
+                <input type="text" id="sizes" name="sizes" placeholder="Size, mm"> <br>
+                <label for="form-factors"><strong>Choose form-factors:</strong></label> <br>
+                <select name="form-factors" id="form-factors">
+                    <option value="" disabled selected hidden>Form-factor:</option>
+                    <option value="mini-itx">Mini-ITX</option>
+                    <option value="micro-atx">Micro-ATX</option>
+                    <option value="mid-tower">Mid Tower</option>
+                    <option value="full-tower">Full Tower</option>
+                </select>
+            </div>
+                <div class="wrap-s">
+                    <label for="power-supply"><strong>Is there built-in power supply?:</strong></label> <br>
+                    <label for="yes">Yes</label>
+                    <input type="radio" id="yes" name="power-supply" value="Yes">
+                    <label for="no">No</label>
+                    <input type="radio" id="no" name="power-supply" value="No"> <br><br>
+                                <div class="wrapcheck">
+                    <label><strong>Front Panel Ports:</strong></label> <br>
+                    <input type="checkbox" id="usb-3.0" name="front-panel-ports" value="usb-3.0">
+                    <label for="usb-3.0">USB 3.0</label>
+                    <input type="checkbox" id="usb-2.0" name="front-panel-ports" value="usb-2.0">
+                    <label for="usb-2.0">USB 2.0</label> <br>
+                    <input type="checkbox" id="audio-jack" name="front-panel-ports" value="audio-jack">
+                    <label for="audio-jack">Audio Jack</label>
+                    <input type="checkbox" id="microphone-jack" name="front-panel-ports" value="microphone-jack">
+                    <label for="microphone-jack">Microphone Jack</label> <br>
+                    <input type="checkbox" id="ethernet" name="front-panel-ports" value="ethernet">
+                    <label for="ethernet">Ethernet Port</label>
+                    <input type="checkbox" id="hdmi" name="front-panel-ports" value="hdmi">
+                    <label for="hdmi">HDMI Port</label> <br>
+                    <input type="checkbox" id="thunderbolt" name="front-panel-ports" value="thunderbolt">
+                    <label for="thunderbolt">Thunderbolt Port</label> <br>
+                                </div>
+                </div>
+        </div>
+        <br>
+        <img id="imagePreview" src="" alt="Image Preview" style="max-width: 200px; max-height: 200px;"> <br>
+        <br>
+        <label for="upload"><strong>Select image file:</strong></label><br>
+        <input type="file" name="file" id="file" onchange="previewImage(event)">
+        <button class="confirm">Confirm</button>
+    </form>
+    <script>
+        function previewImage(event) {
+            let image = document.getElementById('imagePreview');
+            image.src = URL.createObjectURL(event.target.files[0]);
+        }
+
+        function closeForm() {
+            let form = document.querySelector('form'); 
+            form.style.display = 'none'; 
+        }
+    </script>
+</body>
+
+</html>
