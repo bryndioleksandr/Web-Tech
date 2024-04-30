@@ -425,7 +425,7 @@ function addProduct() {
         catDiv.style = 'display:flex; justify-content:end;'
         let cat = document.createElement('span');
         cat.innerHTML = category;
-        cat.style = 'font-size: 12px; font-style: italic; border-radius:10px; color:black; background-color:rgba(138, 136, 134, 0.6); padding: 5px;';
+        cat.style = 'font-size: 12px; font-style: italic; border-radius:10px; color:white; background-color:rgba(138, 136, 134, 0.6); padding: 5px;';
         catDiv.appendChild(cat);
 
         let titleBlock = document.createElement('h3');
