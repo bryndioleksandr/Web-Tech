@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h2>eShop</h2>
+            <button class="btn" id="btn">
+                <h2>create Product</h2>
+            </button>
+            <button id="showArray">log array</button>
+        </header>
+        <div id="main"></div>
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <form id="productForm">
+                <h2>New product</h2>
+                <div class="wrapper">
+                    <label for="productName">Title:</label><br>
+                    <input type="text" id="productName" name="productName" required><br><br>
+                    <label for="description">Description:</label><br>
+                    <textarea id="description" name="description" required></textarea><br><br>
+                    <label for="price">Price:</label><br>
+                    <input type="number" id="price" name="price" required><br><br>
+                    <label for="discount">Discount:</label><br>
+                    <input type="number" id="discount" name="discount"><br><br>
+                    <label for="inStock">In stock:</label><br>
+                    <input type="text" id="inStock" name="inStock" required><br><br>
+                    <label for="brand">Brand:</label><br>
+                    <input type="text" id="brand" name="brand" required><br><br>
+                    <label for="category">Category:</label><br>
+                    <input type="text" id="category" name="category" required><br><br>
+                    <label for="picture">Picture link:</label><br>
+                    <input type="text" id="picture" name="picture" required><br><br>
+                    <input id="btn-submit" type="button" value="Create product">
+                </div>
+              </form>
+            </div>
+          </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
