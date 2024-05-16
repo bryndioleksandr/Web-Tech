@@ -1,11 +1,15 @@
-let modal = document.getElementById('myModal');
-let btn = document.getElementById('btn');
-let span = document.getElementsByClassName('close')[0];
-let submit = document.getElementById("btn-submit");
-let array = JSON.parse(localStorage.getItem('productsArray')) || [];
-let myForm = document.getElementById("productForm");
-let formElements = myForm.elements;
-let showArray = document.getElementById("showArray");
+const modal = document.getElementById('myModal');
+const btn = document.getElementById('btn');
+const span = document.getElementsByClassName('close')[0];
+const submit = document.getElementById("btn-submit");
+const array = JSON.parse(localStorage.getItem('productsArray')) || [];
+const myForm = document.getElementById("productForm");
+const formElements = myForm.elements;
+const showArray = document.getElementById("showArray");
+const confirmBtn = document.createElement('button');
+confirmBtn.id = "temp";
+
+
 
 showArray.onclick = () => {
     console.log(array);
@@ -52,7 +56,7 @@ window.onclick = (event) => {
     }
 }
 
-function validateForm() {
+let validateForm = () => {
     let isValid = true;
     for (let input of productForm.elements) {
         if (input.type !== 'button' && input.type !== 'submit') {
@@ -73,7 +77,7 @@ function validateForm() {
     return isValid;
 }
 
-function addProduct() {
+let addProduct = () => {
     let productsArray = localStorage.getItem('productsArray');
 
     if (productsArray) {
@@ -179,7 +183,7 @@ function addProduct() {
 
             deleteBtn.addEventListener('click', () => deleteElement(productsArray, object));
 
-            editBtn.addEventListener('click', () => edit(object));
+            editBtn.addEventListener('click', () => edit(productsArray, object));
 
 
             idBlock.addEventListener('click', () => {
@@ -194,21 +198,51 @@ function addProduct() {
         });
     }
     else {
-        console.log("Its clear here");
+        console.log("It's clear here");
     }
 }
 
-let edit = (object) => {
+let edit = (productsArray, object) => {
     modal.style = "display: flex;  text-align:center;";
+    submit.style.display = "none";
+    if (!document.querySelector("#productForm #temp")) {
+        myForm.appendChild(confirmBtn);
+    }
+    confirmBtn.innerHTML = "Edit";
     document.querySelector(".modal h2").innerHTML = "Edit product";
     let i = 0;
     for (const key in object) {
         formElements[i].value = object[key];
         i++;
-      }
-}
+    }
+    confirmBtn.onclick = () => {
+        if (validateForm()) {
+            let editedProduct = {};
+            for (let j = 0; j < formElements.length; j++) {
+                let input = formElements[j];
+                if (input.type !== 'button' && input.type !== 'submit' && input.name) {
+                    editedProduct[input.name] = input.value;
+                }
+            }
+            for (let i = 0; i < productsArray.length; i++) {
+                if (productsArray[i] === object) {
+                    productsArray[i] = editedProduct;
+                    break;
+                }
+            }
+            localStorage.setItem('productsArray', JSON.stringify(productsArray));
+            alert('Product is edited successfully!');
+            modal.style.display = "none";
+            addProduct();
+        }
+        else {
+            alert('Please fill all required fields correctly.');
+        }
+    };
+};
 
-function deleteElement(productsArray, object) {
+
+let deleteElement = (productsArray, object) => {
     const index = productsArray.findIndex(item => item === object);
     console.log(`Index: ${index}`);
     if (index !== -1) {
@@ -221,7 +255,7 @@ function deleteElement(productsArray, object) {
             addProduct();
         }
     } else {
-        alert("Element not found in the array");
+        alert("Element is not found in the array");
     }
 }
 
